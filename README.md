@@ -1,4 +1,4 @@
-# crypto
+# Kryptos
 
 ### Table Of Contents
 * [Objective](#objective)
@@ -8,13 +8,13 @@
 * [Future](#future)
 
 ## Objective
-Part cryptography learning exercise, part programming language learning exercise, crypto is a library of common cryptography functions.
+Part cryptography learning exercise, part programming language learning exercise, kryptos is a library of common cryptography functions.
 
 ## Installation
 Clone this repository.
 ````
-git clone https://github.com/pheilbron/libft.git
-cd libft\
+git clone https://github.com/pheilbron/kryptos.git
+cd kryptos\
 ````
 To create the archive, use
 ````
@@ -25,7 +25,7 @@ make && make clean
 To use this library, include the appropriate header file in your programs.
 When compiling with gcc, use the -L flag.
 ````
-gcc [srcs] -L <crypto path> -lcrypto
+gcc [srcs] -L <crypto path> -lkryptos
 ````
 
 ## Functions
