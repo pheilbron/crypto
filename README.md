@@ -1,4 +1,4 @@
-# Kryptos
+# kryptos
 
 ### Table Of Contents
 * [Objective](#objective)
@@ -14,7 +14,7 @@ Part cryptography learning exercise, part programming language learning exercise
 Clone this repository.
 ````
 git clone https://github.com/pheilbron/kryptos.git
-cd kryptos\
+cd kryptos
 ````
 To create the archive, use
 ````
@@ -25,7 +25,7 @@ make && make clean
 To use this library, include the appropriate header file in your programs.
 When compiling with gcc, use the -L flag.
 ````
-gcc [srcs] -L <crypto path> -lkryptos
+gcc [srcs] -L [krytpos_path] -lkryptos
 ````
 
 ## Functions

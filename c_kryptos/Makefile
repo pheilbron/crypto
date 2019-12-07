@@ -1,7 +1,6 @@
 NAME		= libkryptos.a
 
 AR			= ar
-CC			= gcc
 INC_FLAGS	= -I inc -I lib/inc
 CFLAGS		= -Wall -Werror -Wextra 
 DEBUG_FLAGS	= -g -fsanitize=address
