@@ -25,8 +25,4 @@ typedef struct	s_sha512_chunk
 
 extern uint64_t	g_sha512_tab[];
 
-void	init_sha512_message_schedule(sha512_chunk *chunk);
-void	compress_sha512_chunk(sha512_chunk *chunk);
-void	update_sha512_message_schedule(sha512_chunk *chunk, uint8_t type);
-
 #endif

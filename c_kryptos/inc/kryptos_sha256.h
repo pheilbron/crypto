@@ -25,8 +25,4 @@ typedef struct	s_sha256_chunk
 
 extern uint32_t	g_sha256_tab[];
 
-void	init_sha256_message_schedule(sha256_chunk *chunk);
-void	compress_sha256_chunk(sha256_chunk *chunk);
-void	update_sha256_message_schedule(sha256_chunk *chunk, uint8_t type);
-
 #endif
