@@ -1,0 +1,31 @@
+HASH
+- whirlpool
+- md4
+- md2
+- blake2
+- gost
+- haval
+- panama
+- ripemd
+- sha0 ?
+- sha512/X ?
+- sha3
+- tiger
+
+ENC - SYMMETRIC
+- des
+- 3des
+- aes
+
+ENC - ASYMMETRIC
+- rsa
+- dsa
+
+CLASSICAL
+- vigenere
+- caesar
+- rot13
+- enigma
+
+cryptanalysis
+- implement various cryptanalysis functionality
