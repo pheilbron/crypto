@@ -79,6 +79,11 @@
 #define U64_LE_PAD_ONE(x) (1ULL << 63) >> ((7 - (x % 8)) * 8)
 #define U64_BE_PAD_ONE(x) (1ULL << 63) >> ((x % 8) * 8)
 
+#define U32_LE_RPAD_ONE 1UL << 24
+#define U32_BE_RPAD_ONE 1UL
+#define U64_LE_RPAD_ONE 1ULL << 56
+#define U64_BE_RPAD_ONE 1ULL
+
 int			u32_be_to_hex(uint32_t *in, char **out, uint8_t len);
 int			u32_le_to_hex(uint32_t *in, char **out, uint8_t len);
 int			u64_be_to_hex(uint64_t *in, char **out, uint8_t len);
@@ -89,8 +94,10 @@ int			u8_to_u32_le(uint8_t *in, uint32_t **out, int len);
 int			u8_to_u64_be(uint8_t *in, uint64_t **out, int len);
 int			u8_to_u64_le(uint8_t *in, uint64_t **out, int len);
 
-uint32_t	pad_hash_u8_to_u32(char *in, uint32_t **out, uint8_t type);
-uint64_t	pad_hash_u8_to_u64(char *in, uint64_t **out, uint8_t type);
+uint32_t	pad1_u8_to_u32(char *in, uint32_t **out, uint8_t type);
+uint64_t	pad1_u8_to_u64(char *in, uint64_t **out, uint8_t type);
+uint32_t	pad2_u8_to_u32(char *in, uint32_t **out, uint8_t type);
+uint64_t	pad2_u8_to_u64(char *in, uint64_t **out, uint8_t type);
 void		pad_pkcs7(char *in, char *out, int in_len, int block_size);
 int			unpad_pkcs7(char *in, char *out, int block_size);
 

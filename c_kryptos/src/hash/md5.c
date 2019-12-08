@@ -87,7 +87,7 @@ int		md5(void *data, char **hash, uint8_t type)
 	chunk.hash[D] = 0x10325476;
 	if (type == KRY_BUFFER)
 	{
-		chunk.buf_len = pad_hash_u8_to_u32(data, &chunk.block.data, LITTLE_END);
+		chunk.buf_len = pad1_u8_to_u32(data, &chunk.block.data, LITTLE_END);
 		while (chunk.buf_pos < chunk.buf_len)
 		{
 			set_block(&chunk);

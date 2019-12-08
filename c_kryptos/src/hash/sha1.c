@@ -74,7 +74,7 @@ int		sha1(void *data, char **hash, uint8_t type)
 	chunk.hash[E] = 0xc3d2e1f0;
 	if (type == KRY_BUFFER)
 	{
-		chunk.buf_len = pad_hash_u8_to_u32(data, &chunk.block.data, BIG_END);
+		chunk.buf_len = pad1_u8_to_u32(data, &chunk.block.data, BIG_END);
 		while (chunk.buf_pos < chunk.buf_len)
 		{
 			init_message_schedule(&chunk);

@@ -112,7 +112,7 @@ int	sha224(void *data, char **hash, uint8_t type)
 	chunk.buf_pos = 0;
 	if (type == KRY_BUFFER)
 	{
-		chunk.buf_len = pad_hash_u8_to_u32(data, &chunk.block.data, BIG_END);
+		chunk.buf_len = pad1_u8_to_u32(data, &chunk.block.data, BIG_END);
 		while (chunk.buf_pos < chunk.buf_len)
 		{
 			init_message_schedule(&chunk);
@@ -153,7 +153,7 @@ int	sha256(void *data, char **hash, uint8_t type)
 	chunk.hash[H] = 0x5be0cd19;
 	if (type == KRY_BUFFER)
 	{
-		chunk.buf_len = pad_hash_u8_to_u32(data, &chunk.block.data, BIG_END);
+		chunk.buf_len = pad1_u8_to_u32(data, &chunk.block.data, BIG_END);
 		while (chunk.buf_pos < chunk.buf_len)
 		{
 			init_message_schedule(&chunk);
