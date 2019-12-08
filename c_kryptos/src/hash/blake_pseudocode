@@ -41,5 +41,14 @@ salt[4] given by user
 top half is temp values, then first 4 constants ^ salts, then next 4 constants ^ t0, t0, t1, t1
 
 
+initialize temp values
+for each block of message
+	new temp values = compress(temp, message, salt, length up to that point of message (not including padding))
 
-compression(temp, message, salt, counter) -> new temp
+	note on len: if there is no part of the original message in a block, then this value is 0
+
+compress:
+for 14/16 rounds:
+	init state
+	round fuction
+	finalize state

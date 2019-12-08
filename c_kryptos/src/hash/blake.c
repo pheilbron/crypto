@@ -30,6 +30,14 @@ static void	update_block(sha256_chunk *chunk)
 	uint32_t	temp1;
 	uint32_t	temp2;
 
+	for (int i = 0; i < 16; i++)
+	{
+		if (i < 8)
+			chunk->state[i] = chunk->hash[i];
+		else if (i < 12)
+			chunk->state[i] = salt[i - 8] ^ g_blake_256_constant_tab[i - 8];
+		else
+			chunk->state[i] = chunk.^ g_blake_256_constant_tab[i - 8];
 	chunk->temp[A] = chunk->hash[A];
 	chunk->temp[B] = chunk->hash[B];
 	chunk->temp[C] = chunk->hash[C];
@@ -113,7 +121,7 @@ int	blake_256(void *data, char **hash, char *salt, uint8_t type)
 		hex_to_u32_be(salt, &chunk.salt, 4);
 	if (type == KRY_BUFFER)
 	{
-		chunk.buf_len = pad_hash_u8_to_u32(data, &chunk.block.data, BIG_END);
+		chunk.buf_len = pad2_u8_to_u32(data, &chunk.block.data, BIG_END);
 		while (chunk.buf_pos < chunk.buf_len)
 		{
 			init_state(&chunk);
